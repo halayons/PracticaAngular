@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { ListaEmpleadosComponent } from './lista-empleados/lista-empleados.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, 
-            RouterOutlet,
+            RouterOutlet,RouterLink, RouterLinkActive,
             ListaEmpleadosComponent,
             HttpClientModule],
             
@@ -16,5 +16,5 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'gestion-empleados-frontend';
+  title = 'Sistema gestión de empleados';
 }
